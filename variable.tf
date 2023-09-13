@@ -1,10 +1,10 @@
-resource "local_file" "visit" {
-filename = var.filename
-content = var.content
+resource "local_file" "new_pet" {
+  filename = var.filename
+  content  = var.file_content
 }
 variable "filename" {
-default = "visit.txt"
+  default = "new_pets.txt"
 }
-variable "content" {
-default = "hello everyone"
+variable "file_content" {
+  default = "Our new pet is a cute kitten!"
 }
