@@ -1,9 +1,10 @@
+resource "local_file" "new_pet" {
+  filename = var.filename
+  content  = var.file_content
+}
 variable "filename" {
-default = "pets.txt"
+  default = "new_pets.txt"
 }
-variable "content" {
-default = "i love cats"
-}
-variable "prefix" {
-default = "MR"
+variable "file_content" {
+  default = "Our new pet is a cute kitten!"
 }
